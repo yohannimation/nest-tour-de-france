@@ -5,6 +5,7 @@ import { StagesModule } from './module/stages/stages.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { buildTypeOrmConfig } from './config/typeorm.config';
+import { TeamModule } from './module/team/team.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { buildTypeOrmConfig } from './config/typeorm.config';
         buildTypeOrmConfig(configService),
     }),
     StagesModule,
+    TeamModule,
   ],
   controllers: [AppController],
   providers: [AppService],

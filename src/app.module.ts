@@ -6,6 +6,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { buildTypeOrmConfig } from './config/typeorm.config';
 import { TeamModule } from './module/team/team.module';
+import { AuthModule } from './module/auth/auth.module';
+import { RidersModule } from './module/riders/riders.module';
 
 @Module({
   imports: [
@@ -18,6 +20,8 @@ import { TeamModule } from './module/team/team.module';
     }),
     StagesModule,
     TeamModule,
+    AuthModule,
+    RidersModule,
   ],
   controllers: [AppController],
   providers: [AppService],

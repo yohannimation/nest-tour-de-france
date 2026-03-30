@@ -8,6 +8,7 @@ import { buildTypeOrmConfig } from './config/typeorm.config';
 import { TeamModule } from './module/team/team.module';
 import { AuthModule } from './module/auth/auth.module';
 import { RidersModule } from './module/riders/riders.module';
+import { RankingsModule } from './module/rankings/rankings.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { RidersModule } from './module/riders/riders.module';
     TeamModule,
     AuthModule,
     RidersModule,
+    RankingsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

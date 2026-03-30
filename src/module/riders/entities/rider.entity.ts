@@ -1,5 +1,6 @@
+import { Ranking } from "src/module/rankings/entities/ranking.entity";
 import { Team } from "src/module/team/entities/team.entity";
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToOne, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('riders')
 export class Rider {
@@ -14,4 +15,7 @@ export class Rider {
 
   @ManyToOne(() => Team, (team) => team.riders, { onDelete: 'CASCADE' })
   team: Team;
+
+  @OneToOne(() => Ranking, (ranking) => ranking.rider)
+  ranking: Ranking;
 }

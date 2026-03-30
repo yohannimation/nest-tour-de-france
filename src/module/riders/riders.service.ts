@@ -10,7 +10,7 @@ import { Team } from '../team/entities/team.entity';
 export class RidersService {
   constructor(
     @InjectRepository(Rider) private riderRepository: Repository<Rider>,
-    @InjectRepository(Team) private teamRepository: Repository<Team>
+    @InjectRepository(Team) private teamRepository: Repository<Team>,
   ) {}
 
   async create(createRiderDto: CreateRiderDto) {
